@@ -15,14 +15,14 @@ namespace AiR.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Ania i Rafał się bawią.";
 
             return View();
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Zielony Żoliborz...";
 
             return View();
         }

@@ -20,8 +20,6 @@ using Microsoft.Framework.DependencyInjection;
 using Microsoft.Framework.Logging;
 using Microsoft.Framework.Logging.Console;
 using Microsoft.Framework.Runtime;
-using AiR.Models;
-using AiR.Services;
 
 namespace AiR
 {
@@ -51,15 +49,15 @@ namespace AiR
         public void ConfigureServices(IServiceCollection services)
         {
             // Add Entity Framework services to the services container.
-            services.AddEntityFramework()
-                .AddSqlServer()
-                .AddDbContext<ApplicationDbContext>(options =>
-                    options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
+            //services.AddEntityFramework()
+            //    .AddSqlServer()
+            //    .AddDbContext<ApplicationDbContext>(options =>
+            //        options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
 
             // Add Identity services to the services container.
-            services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddDefaultTokenProviders();
+            //services.AddIdentity<ApplicationUser, IdentityRole>()
+            //    .AddEntityFrameworkStores<ApplicationDbContext>()
+            //    .AddDefaultTokenProviders();
 
             // Configure the options for the authentication middleware.
             // You can add options for Google, Twitter and other middleware as shown below.
@@ -84,8 +82,8 @@ namespace AiR
             // services.AddWebApiConventions();
 
             // Register application services.
-            services.AddTransient<IEmailSender, AuthMessageSender>();
-            services.AddTransient<ISmsSender, AuthMessageSender>();
+            //services.AddTransient<IEmailSender, AuthMessageSender>();
+            //services.AddTransient<ISmsSender, AuthMessageSender>();
         }
 
         // Configure is called after ConfigureServices is called.
